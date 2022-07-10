@@ -1,0 +1,8 @@
+spawn(function()
+ _G.autoEgg = true;
+    while _G.autoEgg == true do 
+        local args = {[1] = "basic"}
+        game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+        wait()
+    end
+end)
